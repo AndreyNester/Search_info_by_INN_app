@@ -5,6 +5,7 @@ import { StoreProvider } from '../src/app/store/StoreProvider';
 export const metadata = {
   title: 'My Mantine app',
   description: 'I have followed setup instructions carefully',
+  'http-equiv' : 'upgrade-insecure-requests'
 };
 
 export default function RootLayout({
@@ -14,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <StoreProvider>
-      <html lang="en">
+      <html lang="ru">
         <body>
           <MantineProvider>{children}</MantineProvider>
         </body>

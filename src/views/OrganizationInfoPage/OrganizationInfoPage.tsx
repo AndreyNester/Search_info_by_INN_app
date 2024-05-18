@@ -1,10 +1,9 @@
 import { IOrganizationInfoPageeProps } from "./types"
-import { SSRenderOrganizationInfo } from "../../features/search/ui/SSRenderOrganizationInfo/SSRenderOrganizationInfo";
+import { SSRenderOrganizationInfo } from "../../features/search";
 import { headers } from "next/headers";
 import { getQueryParams } from "./helpers/utils/getQueryParams";
-import { CSRenderOrganizationInfo } from "../../features/search/ui/CSRenderOrganizationInfo/CSRenderOrganizationInfo";
 
-const OrganizationInfoPage = async (props : IOrganizationInfoPageeProps) : Promise<JSX.Element> => {
+export const OrganizationInfoPage = async (props : IOrganizationInfoPageeProps) : Promise<JSX.Element> => {
   const { params : { INN } } = props;
   const referer = headers().get('values');
   let queryParams : {CSR? : string} = {};

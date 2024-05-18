@@ -1,8 +1,6 @@
-import { getOrganizationInfo } from "@/src/entities/organizationInfo/api/api";
+import { getOrganizationInfo } from "@/src/entities";
 import { Suggestion } from "@/src/entities/organizationInfo/api/types";
-import { createAppSlice } from "@/src/shared/model/config/redux/createAppSlice";
-import { PayloadAction } from "@reduxjs/toolkit";
-
+import { createAppSlice } from "@/src/shared/model";
 
 export interface CounterSliceState {
   data : Suggestion[];
@@ -21,10 +19,6 @@ export const counterSlice = createAppSlice({
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: (create) => ({
-    resetData : create.reducer((state)=>{
-      state.data = [];
-      state.status = 'idle';
-    }),
     doAsync : create.asyncThunk(
       async (action: number) => {
         const response = await getOrganizationInfo(action)
@@ -47,5 +41,5 @@ export const counterSlice = createAppSlice({
     )
    }),
 });
-export const { resetData , doAsync } = counterSlice.actions;
+export const { doAsync } = counterSlice.actions;
 

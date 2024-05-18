@@ -1,6 +1,7 @@
 'use client'
 
 import { useAppSelector } from "@/src/shared/model/config/redux/hooks"
+
 export const CSRenderOrganizationInfo = () : JSX.Element => {
   const data = useAppSelector((state)=>state.counter.data)
 

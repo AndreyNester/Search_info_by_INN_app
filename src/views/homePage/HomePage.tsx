@@ -1,8 +1,8 @@
-import { SearchForm } from "@/src/features/search/ui/SearchForm";
+import { SearchForm } from "@/src/features/search";
 import { IHomePageProps } from "./types"
 import styles from './HomePage.module.css';
 
-const HomePage = (props : IHomePageProps) : JSX.Element => {
+export const HomePage = (props : IHomePageProps) : JSX.Element => {
   
   return (
   <section {...props} className={styles.homePage}>

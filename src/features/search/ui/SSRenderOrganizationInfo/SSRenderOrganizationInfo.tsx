@@ -1,4 +1,4 @@
-import { getOrganizationInfo } from "@/src/entities/organizationInfo/api/api";
+import { getOrganizationInfo } from '@/src/entities';
 import { OrganizationInfoResponse } from "@/src/entities/organizationInfo/api/types";
 import styles from './SSRenderOrganizationInfo.module.css';
 import { SearchForm } from "../SearchForm";

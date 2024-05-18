@@ -6,9 +6,10 @@ import { FormEvent, useState } from 'react';
 import { ISearchForm } from './type';
 import styles from './SearchForm.module.css';
 import { useRouter } from 'next/navigation';
-import { useAppDispatch, useAppSelector } from '@/src/shared/model/config/redux/hooks';
+//import { useAppDispatch, useAppSelector } from '@/src/shared/model';
 import { doAsync } from '../model/slices/counterSlice';
 import classNames from 'classnames';
+import { useAppDispatch, useAppSelector } from '@/src/shared/model/config/redux/hooks';
 
 export function SearchForm(props: ISearchForm ) {
 

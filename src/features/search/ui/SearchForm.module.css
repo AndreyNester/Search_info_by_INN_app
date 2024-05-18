@@ -1,0 +1,25 @@
+.searchForm{
+  width: 100%;
+  max-width: 700px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.error {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+

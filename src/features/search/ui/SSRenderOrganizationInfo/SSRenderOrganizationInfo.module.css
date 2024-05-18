@@ -1,0 +1,44 @@
+.orgInfo{
+  width: 100%;
+  min-height: 100vh;
+}
+.container{
+  margin: 0 auto;
+  max-width: 780px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.orgInfo li{
+  list-style-type : none;
+}
+.orgInfo ul{
+  padding : 0
+}
+.title{
+  align-self: center;
+  font-size: 26px;
+  font: 500px;
+  text-transform: uppercase;
+}
+
+.mainList{
+  /* border: 1px solid grey;
+  border-radius: 10px;
+  background-color: antiquewhite; */
+}
+.secondaryList{
+  margin-top: 20px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: antiquewhite;
+}
+
+.secondaryList li {
+  padding-left: 20px;
+}
+
+.name{
+  font-size: 24px;
+}

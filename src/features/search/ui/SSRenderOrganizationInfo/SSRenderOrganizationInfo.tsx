@@ -18,7 +18,7 @@ export const SSRenderOrganizationInfo = async ( {INN} : {INN: number} ) : Promis
     <section className={styles.orgInfo}>
       <div className={styles.container}>
         <SearchForm />
-        {!data.suggestions.length 
+        {!data.suggestions?.length 
         ?
           <div>nothing was found. May be your INN is incorrect</div>
         :
@@ -30,16 +30,16 @@ export const SSRenderOrganizationInfo = async ( {INN} : {INN: number} ) : Promis
           <ul key={index} className={styles.secondaryList}>
             <li className={styles.name}>название : {item.value}</li>
             <li>неофициальное название : {item.unrestricted_value}</li>
-            <li>президент : {item.data.management?.name}</li>
-            <li>Должность : {item.data.management?.post}</li>
-            <li>КПП : {item.data.kpp}</li>
-            <li>Состояние : {item.data.state?.status ? item.data.state.status : 'не известно'}</li>
-            <li>ИНН : {item.data.inn}</li>
-            <li>ОГРН : {item.data.ogrn}</li>
-            <li>ОКОГУ : {item.data.okogu}</li>
-            <li>ОПФ : {item.data.opf?.code ? item.data.opf.code : 'unknown'}</li>
-            <li>адресс : {item.data.address?.value ? item.data.address.value : 'unknown'}</li>
-            <li>почтовый индекс : {item.data.address?.data.postal_code ? item.data.address.data.postal_code : 'unknown'}</li>
+            <li>президент : {item.data?.management?.name}</li>
+            <li>Должность : {item.data?.management?.post}</li>
+            <li>КПП : {item.data?.kpp}</li>
+            <li>Состояние : {item.data?.state?.status ? item.data.state.status : 'не известно'}</li>
+            <li>ИНН : {item.data?.inn}</li>
+            <li>ОГРН : {item.data?.ogrn}</li>
+            <li>ОКОГУ : {item.data?.okogu}</li>
+            <li>ОПФ : {item.data?.opf?.code ? item.data.opf.code : 'unknown'}</li>
+            <li>адресс : {item.data?.address?.value ? item.data.address.value : 'unknown'}</li>
+            <li>почтовый индекс : {item.data?.address?.data?.postal_code ? item.data.address.data.postal_code : 'unknown'}</li>
           </ul>
         </li>
         ))}

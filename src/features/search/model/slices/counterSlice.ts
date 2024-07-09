@@ -30,7 +30,7 @@ export const counterSlice = createAppSlice({
         },
         fulfilled: (state, action) => {
           state.status = 'completed'
-          state.data = action.payload.suggestions
+          state.data = action.payload.suggestions ? action.payload.suggestions : []
         },
         rejected : (state, action) => {
           console.log(action);

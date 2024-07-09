@@ -111,25 +111,25 @@ export const $Data2 = object({
 });
 
 export const $Address = z.object({
-  value: z.string(),
-  unrestricted_value: z.string(),
-  invalidity: z.any(),
-  data: $Data2
+  value: z.string().nullable(),
+  unrestricted_value: z.string().nullable(),
+  invalidity: z.any().nullable(),
+  data: $Data2.nullable()
 })
 
 export const $Name = z.object({
-  full_with_opf: z.string(),
-  short_with_opf: z.string(),
-  latin: z.any(),
-  full: z.string(),
-  short: z.string()
+  full_with_opf: z.string().nullable(),
+  short_with_opf: z.string().nullable(),
+  latin: z.any().nullable(),
+  full: z.string().nullable(),
+  short: z.string().nullable()
 })
 
 export const $Opf = z.object({
-  type: z.string(),
-  code: z.string(),
-  full: z.string(),
-  short: z.string()
+  type: z.string().nullable(),
+  code: z.string().nullable(),
+  full: z.string().nullable(),
+  short: z.string().nullable()
 })
 
 export const $State = z.object({
@@ -141,9 +141,9 @@ export const $State = z.object({
 })
 
 export const $Management = z.object({
-  name: z.string(),
-  post: z.string(),
-  disqualified: z.any()
+  name: z.string().nullable(),
+  post: z.string().nullable(),
+  disqualified: z.any().nullable()
 })
 
 export const $Data = z.object({
@@ -183,14 +183,14 @@ export const $Data = z.object({
   ogrn_date: z.number().nullable().optional(),
   okved_type: z.string().nullable().optional(),
   employee_count: z.any().nullable()
-})
+}).nullable()
 
 export const $Suggestion = z.object({
   value : z.string(),
-  unrestricted_value : z.string(),
-  data : $Data
+  unrestricted_value : z.string().nullable(),
+  data : $Data.nullable()
 })
 
 export const $OrganizationInfoResponse = z.object({
-  suggestions : z.array($Suggestion)
+  suggestions : z.array($Suggestion).nullable()
 })
